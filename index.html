@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Huiyu Guan TTP static</title>
+	<h1>My name is Huiyu Guan and my favorite hobby is watch the movie</h1>
+	<h1>The current time is: <span id = "currentTime"></span></h1>
+</head>
+<body>
+	<div id = "currentTime"></div>
+
+	<script type="text/javascript">
+		function getTime(){
+			var time = new Date();
+			var h = time.getHours();
+			var m = time.getMinutes();
+			var s = time.getSeconds();
+
+			if(h > 12){
+				h = h - 12;
+			}
+			document.getElementById("currentTime").innerHTML = h +":" + m + ":" + s;
+		}
+		setInterval("getTime()", 1000);
+	</script>
+</body>
+</html>
